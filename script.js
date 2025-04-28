@@ -7,10 +7,12 @@ const types = [
     "Programador",
     "Autodidata",
     "Dev Apps",
-    "FreeLancer"
+    "FreeLancer",
+    "Dev FullStack",
+    "Simpático",
 ]
 
-function trocaTexto () {
+function trocaTexto() {
     if (i < types.length - 1) {
         i++
     }
@@ -18,8 +20,10 @@ function trocaTexto () {
         i = 0
     }
     textoAnimado.innerText = types[i]
+
 }
 
-trocaTexto();
-
+trocaTexto()
 setInterval(trocaTexto, 5000)
+
+

@@ -1,44 +1,55 @@
-* {
-    font-family: 'Poppins', sans-serif;
-    user-select: none;
-    margin: 0;
-}
+@layer base {
 
-body {
-    background-color: #121212;
-}
 
-/* header fixo */
-header {
-    right: 20px;
-    top: 20px;
-    margin: 10px;
-    justify-content: space-evenly;
-    display: flex;
-    position: fixed;
-    border-radius: 50px;
-    align-items: center;
-    width: 25%;
-    height: 10%;
-    background-color: #121212;
-    border: 3px solid #3A86FF;
-
-    a {
-        display: inline;
-        color: white;
-        cursor: pointer;
-        font-size: 20px;
-        transition: background-color 0.5s, color 0.5s, transform 0.1s;
+    * {
+        font-family: 'Poppins', sans-serif;
+        user-select: none;
+        margin: 0;
     }
 
-    a:hover {
-        color: #3A86FF;
+    body {
+        background-color: #121212;
     }
 
-    a:active {
-        transform: scale(0.9);
-    }
 }
+
+@layer header {
+
+    /* header fixo */
+    header {
+        right: 20px;
+        top: 20px;
+        margin: 10px;
+        justify-content: space-evenly;
+        display: flex;
+        position: fixed;
+        border-radius: 50px;
+        align-items: center;
+        width: 25%;
+        height: 10%;
+        background-color: #121212;
+        border: 3px solid #3A86FF;
+
+        a {
+            text-decoration: none;
+            display: inline;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.5s, color 0.5s, transform 0.1s;
+        }
+
+        a:hover {
+            color: #3A86FF;
+        }
+
+        a:active {
+            transform: scale(0.9);
+        }
+    }
+
+}
+
 
 /* Home pagina */
 #Home {
@@ -50,7 +61,7 @@ header {
 
     #pagina1 {
         height: 100vh;
-        width: 50%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -69,6 +80,7 @@ header {
                 position: relative;
                 display: flex;
                 flex-direction: column;
+                text-align: center;
 
                 span {
                     width: 720px;
@@ -78,6 +90,7 @@ header {
                     font-size: 98px;
                     position: relative;
                     animation: slide 5s infinite;
+                    text-align: center;
                 }
             }
         }
@@ -111,22 +124,6 @@ header {
             transform: scale(0.95);
             background-color: #2f70d9;
         }
-    }
-}
-
-#pagina2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 50%;
-
-    #containerAnimation {
-        display: flex;
-        width: 60%;
-        height: 60%;
-        background-color: #3A86FF;
-        border-radius: 20px;
     }
 }
 
@@ -168,8 +165,8 @@ header {
 
 
             img {
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
                 transition: .35s;
                 cursor: pointer;
             }
@@ -222,9 +219,53 @@ header {
 /* TypeAnimation */
 
 
-@keyframes blink {
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
     50% {
-        border-color: transparent;
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes direita {
+    5% {
+        transform: translateX(-20%);
+    }
+
+    8% {
+        transform: translateX(-20%);
+    }
+
+    80% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes esquerda {
+    5% {
+        transform: translateX(100%);
+    }
+
+    8% {
+        transform: translateX(100%);
+    }
+
+    80% {
+        transform: translateX(-20%);
+    }
+
+    100% {
+        transform: translateX(20%);
     }
 }
 
