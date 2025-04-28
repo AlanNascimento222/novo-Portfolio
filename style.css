@@ -217,7 +217,7 @@
 }
 
 /* TypeAnimation */
-
+/* media querrys e animacoes */
 
 @keyframes pulse {
     0% {
@@ -289,5 +289,65 @@
     100% {
         transform: translateX(100%);
         color: transparent;
+    }
+}
+
+/* responsividade */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 100px;
+    }
+
+    #Home {
+        #pagina1 {
+            h1 {
+                font-size: 1rem;
+                span {
+                    font-size:  1rem;
+                }
+            }
+        }
+
+        #containerBotoes {
+            button {
+                padding: 1.2rem 2rem;
+                font-size: 16px;
+            }
+        }
+    }
+
+    #Sobre {
+        #tituloTexto {
+            h1 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    
+        #skills {
+
+
+            h1 {
+                font-size: 24px;
+            }
+
+            #roller {
+                height: 100vh;
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
     }
 }
