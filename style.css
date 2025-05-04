@@ -29,7 +29,7 @@
         height: 10%;
         background-color: #121212;
         border: 3px solid #3A86FF;
-
+        z-index: 1;
         a {
             text-decoration: none;
             display: inline;
@@ -69,9 +69,11 @@
         gap: 10%;
 
         #containerTitulo {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            line-height: 1.0;
+            line-height: 1.2;
 
             h1 {
                 color: #DADADA;
@@ -83,11 +85,12 @@
                 text-align: center;
 
                 span {
-                    width: 720px;
-                    height: 98px;
+                    width: 200px;
+                    text-align: center;
+                    white-space: nowrap;
                     color: #3A86FF;
                     font-weight: 800;
-                    font-size: 98px;
+                    font-size: 96px;
                     position: relative;
                     animation: slide 5s infinite;
                     text-align: center;
@@ -136,14 +139,15 @@
     align-items: center;
     height: 100vh;
     width: 100%;
+    padding-bottom: 40px ;
 
     #skills {
-        margin-top: 30px;
+        margin-top: 90px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
-        height: 20%;
+        height: 25%;
         width: 100%;
 
         h1 {
@@ -159,7 +163,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            height: 60%;
+            height: 50%;
             background-color: #3A86FF;
             gap: 40px;
 
@@ -180,24 +184,20 @@
     }
 
 
-    #tituloTexto {
+    .tituloTexto {
         text-align: justify;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 60%;
-        width: 70%;
+        width: 100%;
 
         h1 {
             text-align: center;
-            border-radius: 10px;
-            position: relative;
-            width: 500px;
-            background-color: #3A86FF;
             color: #DADADA;
             font-weight: 700;
-            font-size: 66px;
+            font-size: 93px;
         }
 
         p {
@@ -205,6 +205,82 @@
             color: #DADADA;
             font-weight: 400;
             font-size: 36px;
+        }
+    }
+}
+
+#Projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    .tituloTexto {
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        h1 {
+            text-align: center;
+            border-radius: 10px;
+            position: relative;
+            width: 500px;
+            color: #DADADA;
+            font-weight: 700;
+            font-size: 93px;
+        }
+    }
+
+    #containerCards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;  
+        align-items: center;
+        width: 100%;
+        height: 60%;
+
+        
+        .card {
+            width: 350px;
+            height: 400px;
+            background-color: #3A86FF;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            
+            h1 {
+                color: #DADADA;
+                font-weight: 800;
+                font-size: 36px;
+                text-align: center;
+            }
+
+            p {
+                color: #DADADA;
+                font-weight: 400;
+                font-size: 20px;
+                text-align: justify;
+
+            }
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card:active {
+            transform: scale(0.95);
         }
     }
 }
@@ -306,8 +382,9 @@
         #pagina1 {
             h1 {
                 font-size: 1rem;
+
                 span {
-                    font-size:  1rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -330,7 +407,7 @@
                 font-size: 20px;
             }
         }
-    
+
         #skills {
 
 
@@ -343,6 +420,7 @@
                 width: 100%;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+
                 img {
                     width: 60px;
                     height: 60px;
